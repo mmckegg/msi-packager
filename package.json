@@ -1,6 +1,6 @@
 {
   "name": "msi-packager",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Build MSI (Windows Installer) packages on Mac and Linux",
   "main": "index.js",
   "scripts": {
