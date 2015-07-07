@@ -1,0 +1,35 @@
+{
+  "name": "msi-packager",
+  "version": "0.0.0",
+  "description": "Build MSI (Windows Installer) packages on Mac and Linux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmckegg/msi-packager.git"
+  },
+  "keywords": [
+    "msi",
+    "windows",
+    "installer",
+    "electron",
+    "wix",
+    "msitools",
+    "wixl",
+    "candle",
+    "light"
+  ],
+  "author": "Matt McKegg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmckegg/msi-packager/issues"
+  },
+  "homepage": "https://github.com/mmckegg/msi-packager#readme",
+  "dependencies": {
+    "async-each": "^0.1.6",
+    "temp": "^0.8.3",
+    "xmlbuilder": "^2.6.4"
+  }
+}
