@@ -135,7 +135,7 @@ function getComponents (path, options, cb) {
             })
           ]
 
-          if (subPath === options.executablePath) {
+          if (subPath === options.executable) {
             items.push(el('Shortcut', {
               Id: 'StartMenuShortcut',
               Advertise: 'yes',

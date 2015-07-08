@@ -12,7 +12,7 @@ module.exports = function(options, cb) {
   //  version
   //  manufacturer
   //  iconPath
-  //  executablePath
+  //  executable
   //  localInstall
 
   writeXml(options, function (err, path) {

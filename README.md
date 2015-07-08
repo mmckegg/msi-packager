@@ -43,7 +43,7 @@ var options = {
   version: '1.0.0',
   manufacturer: 'loopjs.com',
   iconPath: '/Users/matt/Code/loop/loopjs-packager/icon.ico',
-  executablePath: 'Loop Drop.exe',
+  executable: 'Loop Drop.exe',
 
   // optional
   description: "Some description",
@@ -65,6 +65,20 @@ If you specify `localUser: true` as an option, the app will be installed to the 
 
 ## CLI
 
-Not yet implemented :( 
+```bash
+Usage: msi-packager <source> <output> [options]
 
-**Pull requests accepted!**
+source     Directory containing app to package
+output     write output .msi to this path
+
+Options:
+   -n, --name           
+   -v, --version        Specify application version
+   -m, --manufacturer   
+   -u, --upgrade-code   Specify GUID to use for upgrading from other versions
+   -i, --icon           Specify an icon to use on shortcuts and installer
+   -e, --executable     Specify file to create shortcuts for
+   -l, --local          Install per user (no administrator rights required)
+```
+
+All options are required except for `--local`.

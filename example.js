@@ -8,7 +8,7 @@ var options = {
   source: '/Users/matt/Code/loop/loopjs-packager/build/Loop Drop-win32',
   output: '/Users/matt/Code/loop/loopjs-packager/releases/Loop Drop v1.0.0.msi',
   iconPath: '/Users/matt/Code/loop/loopjs-packager/icon.ico',
-  executablePath: 'Loop Drop.exe',
+  executable: 'Loop Drop.exe',
   localInstall: true
 }
 
