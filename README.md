@@ -83,4 +83,4 @@ Options:
    -l, --local          Install per user (no administrator rights required)
 ```
 
-All options are required except for `--local`.
+All options are required except for `--local` and `--arch`.
