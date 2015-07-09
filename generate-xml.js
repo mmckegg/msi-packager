@@ -81,7 +81,7 @@ function installerFor (components, options) {
         Name: 'SourceDir'
       }, [
         el('Directory', {
-          Id: options.localInstall ? 'LocalAppDataFolder' : 'ProgramFilesFolder', 
+          Id: getProgramsFolder(options), 
         }, [
           el('Directory', {
             Id: 'INSTALLDIR',
@@ -166,6 +166,18 @@ function getComponents (path, options, cb) {
       cb(null, components, ids)
     })
   })
+}
+
+function getProgramsFolder (options) {
+  if (options.localInstall) {
+    return 'LocalAppDataFolder'
+  } else {
+    if (options.arch === 'x64') {
+      return 'ProgramFiles64Folder'
+    } else {
+      return 'ProgramFilesFolder'
+    }
+  }
 }
 
 function escapeId (id) {

@@ -47,6 +47,7 @@ var options = {
 
   // optional
   description: "Some description",
+  arch: 'x86',
   localInstall: true
 
 }
@@ -75,6 +76,7 @@ Options:
    -n, --name           
    -v, --version        Specify application version
    -m, --manufacturer   
+   -a, --arch           Specify the target architecture: x86 or x64 (optional)
    -u, --upgrade-code   Specify GUID to use for upgrading from other versions
    -i, --icon           Specify an icon to use on shortcuts and installer
    -e, --executable     Specify file to create shortcuts for

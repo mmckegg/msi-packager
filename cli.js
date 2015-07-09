@@ -35,6 +35,11 @@ var opts = require("nomnom")
       required: true
     },
 
+    'arch': {
+      abbr: 'a',
+      help: 'Specify the target architecture: x86 or x64 (optional)'
+    },
+
     'upgradeCode': {
       abbr: 'u',
       full: 'upgrade-code',

@@ -11,12 +11,19 @@ module.exports = function(options, cb) {
   //  upgradeCode
   //  version
   //  manufacturer
+  //  arch
   //  iconPath
   //  executable
   //  localInstall
 
   writeXml(options, function (err, path) {
-    execFile('wixl', [path, '-o', options.output], cb)
+    var args = [path, '-o', options.output]
+
+    if (options.arch) {
+      args.push('--arch', options.arch)
+    }
+
+    execFile('wixl', args, cb)
   })
 }
 
