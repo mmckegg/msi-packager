@@ -62,7 +62,7 @@ createMsi(options, function (err) {
 
 By default the app will be installed for all users under **Program Files**.
 
-If you specify `localUser: true` as an option, the app will be installed to the user's AppData folder. This allows non-admin users to install your app. 
+If you specify `localInstall: true` as an option, the app will be installed to the user's AppData folder. This allows non-admin users to install your app. 
 
 ## CLI
 
