@@ -60,6 +60,12 @@ var opts = require("nomnom")
       required: true
     },
 
+    'runAfter': {
+      abbr: 'r',
+      full: 'run-after',
+      help: 'Run the application after installation completes'
+    },
+
     'localInstall': {
       flag: true,
       full: 'local',
