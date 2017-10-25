@@ -50,8 +50,21 @@ function installerFor (components, options) {
       el('InstallExecuteSequence', [
         el('RemoveExistingProducts', {
           Before: "InstallInitialize" 
-        })
+        }),
+	options.runAfter ? el('Custom', {
+	  Action: 'LaunchInstalledExe',
+	  After: 'InstallFinalize'
+	}) : ()
       ]),
+
+      el('CustomAction', {
+	Id: "LaunchInstalledExe",
+	FileKey: "mainExecutableFile", // what goes here?
+	ExeCommand: "",                // and here?
+	Execute: "immediate",
+	Impersonate: "yes",
+	Return: "asyncNoWait"
+      }),
 
       el('Package', {
         InstallerVersion: "200",
