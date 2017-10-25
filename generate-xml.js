@@ -54,7 +54,7 @@ function installerFor (components, options) {
 	options.runAfter ? el('Custom', {
 	  Action: 'LaunchInstalledExe',
 	  After: 'InstallFinalize'
-	}) : ()
+	}) : ""
       ]),
 
       el('CustomAction', {
