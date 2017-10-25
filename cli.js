@@ -62,6 +62,7 @@ var opts = require("nomnom")
 
     'runAfter': {
       abbr: 'r',
+      flag: true
       full: 'run-after',
       help: 'Run the application after installation completes'
     },
