@@ -54,7 +54,7 @@ function installerFor (components, options) {
 
       options.runAfter ? el('CustomAction', {
 	  Id: "LaunchApplication",
-	  ExeCommand: "/c start \"\" \"C:\\Program Files\\"+options.name+"\\"+options.executable+"\"",
+	  ExeCommand: "/c start \"\" \"%programfiles%\\"+options.name+"\\"+options.executable+"\"",
 	  Execute: "",
 	  Property: "cmd",
 	  Impersonate: "yes"
