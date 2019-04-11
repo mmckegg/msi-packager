@@ -32,7 +32,7 @@ function installerFor (components, options) {
     }, [
 
       el('Property', {
-        Id: 'PREVIOUSVERSIONSINSTALLED',
+        Id: 'NEWERVERSIONDETECTED',
         Secure: 'yes'
       }),
 
@@ -40,12 +40,22 @@ function installerFor (components, options) {
         Id: options.upgradeCode
       }, [
         el('UpgradeVersion', {
+          Minimum: options.version,
+          Property: "NEWERVERSIONDETECTED",
+          OnlyDetect: "yes",
+          
+        }),
+        el('UpgradeVersion', {
           Minimum: '0.0.0',
-          Property: "PREVIOUSVERSIONSINSTALLED",
+          Maximum: options.version,
+          Property: "OLDERVERSIONBEINGUPGRADED",
           IncludeMinimum: "yes",
           IncludeMaximum: "no"
         })
       ]),
+      el('Condition', {
+        Message: "A newer version of this software is already installed."
+      }, ["NOT NEWERVERSIONDETECTED"]),
 
       options.runAfter ? el('Property', {
 	Id: "cmd",
