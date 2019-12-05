@@ -31,12 +31,12 @@ function writeXml(options, cb) {
   temp.open('msi-packager', function(err, info) {
     generateXml(options, function(err, xml) {
       fs.write(info.fd, xml, function(err) {
-        if(err) return console.log(err);
-        console.log("XML file was saved!");
-      });
-      fs.close(info.fd, function (err) {
         if (err) return cb(err)
-        cb(null, info.path)
+        
+        fs.close(info.fd, function (err) {
+          if (err) return cb(err)
+          return cb(null, info.path)
+        })
       })
     })
   })
