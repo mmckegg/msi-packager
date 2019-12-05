@@ -152,7 +152,8 @@ function getComponents (path, options, cb) {
         } else {
           var id = escapeId(subPath)
           ids.push(id)
-
+          
+          entry = entry.replace(new RegExp('\\$', 'g'), '$$$$')
           var items = [
             el('File', {
               Id: id,
