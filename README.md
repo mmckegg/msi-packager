@@ -19,8 +19,14 @@ $ brew install msitools
 
 ```bash
 # ubuntu / debian
+$ sudo apt-get install wixl
+```
+
+```bash
+# older ubuntu / debian
 $ sudo apt-get install msitools
 ```
+
 
 ## Install [via npm](https://www.npmjs.com/package/msi-packager)
 
