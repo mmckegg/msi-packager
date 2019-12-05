@@ -35,7 +35,7 @@ function writeXml(options, cb) {
         
         fs.close(info.fd, function (err) {
           if (err) return cb(err)
-          cb(null, info.path)
+          return cb(null, info.path)
         })
       })
     })
