@@ -48,26 +48,26 @@ function installerFor (components, options) {
       ]),
 
       options.runAfter ? el('Property', {
-	    Id: "cmd",
-	    Value: "cmd.exe"
+        Id: "cmd",
+        Value: "cmd.exe"
       }) : "",
 
       options.runAfter ? el('CustomAction', {
-	    Id: "LaunchApplication",
-	    ExeCommand: "/c start \"\" \"%programfiles%\\"+options.name+"\\"+options.executable+"\"",
-	    Execute: "",
-	    Property: "cmd",
-	    Impersonate: "yes"
+        Id: "LaunchApplication",
+        ExeCommand: "/c start \"\" \"%programfiles%\\"+options.name+"\\"+options.executable+"\"",
+        Execute: "",
+        Property: "cmd",
+        Impersonate: "yes"
       }) : "",
 
       el('InstallExecuteSequence', [
         el('RemoveExistingProducts', {
           Before: "InstallInitialize" 
         }),
-	    options.runAfter ? el('Custom', {
-	      Action: 'LaunchApplication',
-	      After: 'InstallFinalize'
-	    }, ["NOT Installed"]) : ""
+        options.runAfter ? el('Custom', {
+          Action: 'LaunchApplication',
+          After: 'InstallFinalize'
+        }, ["NOT Installed"]) : ""
       ]),
 
       options.runAfter ? el('CustomAction', {
