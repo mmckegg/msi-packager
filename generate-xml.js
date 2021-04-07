@@ -70,14 +70,14 @@ function installerFor (components, options) {
 	    }, ["NOT Installed"]) : ""
       ]),
 
-      el('CustomAction', {
+      options.runAfter ? el('CustomAction', {
 	    Id: "LaunchInstalledExe",
 	    FileKey: "mainExecutableFile", // what goes here?
 	    ExeCommand: "",                // and here?
 	    Execute: "immediate",
 	    Impersonate: "yes",
 	    Return: "asyncNoWait"
-      }),
+      }) : "",
 
       el('Package', {
         InstallerVersion: "200",
