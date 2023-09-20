@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/mmckegg/msi-packager#readme",
   "dependencies": {
-    "async-each": "^0.1.6",
+    "async-each": "^1.0.6",
     "nomnom": "^1.8.1",
     "temp": "^0.8.3",
     "xmlbuilder": "^2.6.4",
