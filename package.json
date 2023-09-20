@@ -34,7 +34,7 @@
     "async-each": "^0.1.6",
     "nomnom": "^1.8.1",
     "temp": "^0.8.3",
-    "xmlbuilder": "^2.6.4",
+    "xmlbuilder": "^15.1.1",
     "yargs": "^3.15.0"
   }
 }
